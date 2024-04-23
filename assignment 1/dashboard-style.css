@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ececec;
+}
+
+.rounded-4 {
+    border-radius: 20px;
+}
+
+.rounded-5 {
+    border-radius: 30px;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: transparent;
+}
+
+.accordion-item {
+    border: none;
+    background-color: transparent;
+}
+
+.accordion-button {
+    padding: 0.5rem 0;
+}
+
+.accordion-body {
+    padding: 0.5rem 0;
+}
+
+.accordion-body a {
+    display: block;
+    padding: 0.25rem 0;
+}
+
+.accordion-body a:hover {
+    color: #dee2e6 !important;
+}
+
+.card {
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+.row > .col-md-9 {
+    flex: 0 0 auto;
+    width: 75%;
+}
+
+.btn-primary {
+    background-color: #103cbe;
+    border-color: #103cbe;
+}
+
+.btn-primary:hover {
+    background-color: #0c3099;
+    border-color: #0c3099;
+}
