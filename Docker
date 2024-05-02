@@ -1,0 +1,86 @@
+2c) Create Docker Container Environment (NVIDEIA Docker or any other).
+Containers are isolated environment to run any code.
+What is a Docker container?
+A Docker container is a standardized unit of software that packages code and all its dependencies (libraries, configuration files) together. This allows the container to run consistently on any system with Docker installed, regardless of the underlying operating system.
+What is the purpose of creating a Docker container environment?
+The purpose of creating a Docker container environment is to encapsulate an application and its dependencies into a standardized unit that can run consistently across different environments. This allows for easier deployment, scalability, and management of software applications.
+What are the benefits of using Docker containers?
+Portability: Containers run consistently across different environments.
+Isolation: Each container runs in isolation, preventing conflicts between applications.
+Reproducibility: The containerized environment guarantees the same setup regardless of the system.
+Efficiency: Containers are lightweight and share the underlying operating system efficiently.
+Why would you choose NVIDIA Docker specifically for creating a container environment?
+ NVIDIA Docker is specifically designed for GPU-accelerated applications. If your application requires GPU resources for tasks such as deep learning, image processing, or scientific computing, NVIDIA Docker provides optimized support for managing GPU resources within Docker containers.
+Docker uses containerization to package an application and its dependencies into a single unit, ensuring that the application runs consistently across different environments. This portability makes it easier to deploy the application on various platforms without worrying about compatibility issues. Additionally, Docker's image-based approach allows for reproducible builds, ensuring that the same application can be reproduced identically in different environments.
+Developing, shipping and running applications and provide the ability to run application in close environment and run mulitple docker simultaneously.
+
+
+
+
+Code:
+Install Docker, Nodejs, docker extension
+docker --version
+Open VS Code
+Step-1: Create a folder (Note: Folder name should be in lowercase).
+Let the folder name be: assignment2b
+Step-2: Create any file with any extension (such as .js, .txt, .py, etc....) in the same
+above folder (Here, assignment2b) and write some content in the file.
+Let the file name be: file2b.js
+The file contains the following code:
+console.log("Name : Avnish");
+console.log("class : TE-A");
+console.log("rollno : 39");
+console.log("Branch : IT");
+
+Step-3: Create file in the same folder with file name as- Dockerfile and press
+enter key.
+File: Dockerfile
+Step-4: Write following code in Dockerfile (Created in Step-3) and save it.:
+FROM node:alpine
+COPY .  /assignment2b
+CMD node /assignment2b/file2b.js
+
+Step-5: Open terminal in VS Code and type the following command:
+docker --version
+We will see the version of your docker if it is installed successfully.
+Step-6: In the same terminal in VS Code, type the following command:
+node file2b.js
+It will display the contents in your file which is created in Step-2.
+
+Step-7: In the same terminal in VS Code, type the following command:
+docker build -t assignment2b .
+We will see that it is successfully built.
+
+Step-8: In the same terminal in VS Code, type the following command:
+docker images
+You will see the docker images with REPOSITORY, TAG, IMAGE ID,
+CREATED (Time), SIZE.
+
+Why Docker is Used?
+There are several key reasons why Docker is widely used in software development and deployment:
+•	Portability and Consistency: Applications packaged as Docker containers can run seamlessly across different environments (development machines, testing servers, production environments) regardless of the underlying operating system. This ensures consistent behavior and simplifies deployment.
+•	Isolation: Each Docker container runs in its own isolated environment with its own set of dependencies. This prevents conflicts between applications and ensures they don't interfere with the host system or other containers.
+•	Resource Efficiency: Docker containers are lightweight and share the underlying operating system kernel. This allows for efficient use of system resources compared to traditional virtual machines.
+•	Reproducibility: Docker containers guarantee a consistent environment. All dependencies and configurations are bundled within the container, ensuring the application behaves identically regardless of the environment it runs in.
+•	Faster Development and Deployment: Docker allows developers to build, test, and deploy applications quickly and easily. Images can be built and shared, streamlining the development workflow.
+Impact of Not Using Docker:
+If you don't use Docker, you might encounter some challenges:
+•	Environment Inconsistencies: Applications might behave differently depending on the underlying system configuration and installed libraries. This can lead to debugging difficulties and deployment issues.
+•	Dependency Management: Manually managing application dependencies can be complex and time-consuming. Missing or incompatible dependencies can cause application failures.
+•	Resource Inefficiency: Traditional virtual machines can be resource-intensive compared to Docker containers. This can be a concern for applications requiring efficient resource utilization.
+•	Deployment Challenges: Manually deploying applications to different environments can be cumbersome and error-prone. Docker simplifies deployment by providing a standardized approach.
+•	Slower Development Cycles: Without containerization, the development and deployment process can be slower due to challenges mentioned above.
+
+Code :
+1.	Try these separately : docker --version/docker images/ docker ps
+2.	Open docker hub->Download openjdk(copy link and paste in terminal)
+3.	docker image
+4.	docker run --name JAVA -it -d –openjdk
+5.	docker ps
+6.	docker exec -it JAVA jshell
+7.	System.out.println(“Hello Docker”);
+8.	Int a = 10; -> int b=20; -> System.out.println(a+b);
+9.	/exit
+10.	docker ps -> docker stop (container ID) ->docker container rm--(no) -> docker image prune
+
+
