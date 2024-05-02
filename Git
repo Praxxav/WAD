@@ -1,0 +1,51 @@
+Assignment 2 a. Create version control account on GitHub and using Git commands to create repository and push your code to GitHub. 
+What is Version Control? (Explanation: Version control is a system that tracks changes made to files over time. It allows you to revert to previous versions if needed, collaborate with others, and maintain a history of your code.)
+What is Git?
+Git is a version control system that manages and tracks changes in files and directories. It is a command-line tool installed on your local machine, allowing you to work with Git repositories locally. Git works by creating a repository (repo) that stores all the files and history of a project. Developers can make changes to files, stage those changes for commit, and then commit them to the repository. Git keeps track of these commits, making it easy to revert to previous versions if needed.
+What is Github?
+Think of GitHub as an online storage locker for your Git repositories. It allows you to store your project's history (tracked by Git) in the cloud.
+It's a web-based platform (like https://github.com/Index) where you can create accounts, collaborate with others, and share your code.
+GitHub is a hosting platform for Git repositories, providing a centralized location to store and collaborate on code.
+It is a web-based platform accessed through a browser, offering features like repository hosting, collaboration tools, issue tracking, code review, and project management.
+A commit message is a brief description of the changes made in a commit.
+Branches in Git allow you to work on different versions or features of your code independently. You can create new branches (git branch <branch-name>), switch between branches (git checkout <branch-name>), merge branches (git merge <branch-name>), and delete branches (git branch -d <branch-name>).
+Check current username and email :
+git config user.name
+git config user.email
+Change username and email:
+git config --global user.name "VibeWithAvnish"
+git config --global user.email "avnishk_t21108@students.isquareit.edu.in"
+
+Code:
+New Terminal
+•	mkdir prac 
+•	cd prac
+•	git --version
+Go to github website
+•	create new repository
+•	give name (wadgit)
+•	give description 
+Go back to Vs Code
+•	create new text file
+•	write text in the file
+Open Terminal
+•	git init
+•	git add . or name of file
+•	git status
+go back to github website
+•	click on https button and copy the link
+Go to terminal
+•	git remote add origin "link"
+•	git commit -m "first commit"
+•	git status
+•	git push -u origin master
+Open Github website and refresh page
+Open VS Code
+•	Create new text file 
+•	write content
+In Terminal
+•	git add .
+•	git status
+•	git commit -m "2nd Commit"
+•	git push -u origin master
+
