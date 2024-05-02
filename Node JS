@@ -1,0 +1,39 @@
+3a. Create a Node.JS Application which serves a static website.
+What is Node.js?
+Node.js is an open-source, server-side platform built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript code on the server, enabling the development of scalable and high-performance web applications. This application acts as a web server that serves static website content like HTML, CSS, and JavaScript files.
+What is a static website?
+A static website contains web pages with fixed content that remains unchanged unless manually updated. These websites are typically built using HTML, CSS, and JavaScript and do not require server-side processing or database interactions.
+Why would you use Node.js to serve a static website?
+Node.js can be used to serve static files efficiently and handle HTTP requests. It provides a lightweight and fast server environment, making it suitable for hosting static websites and serving static assets like HTML, CSS, images, and JavaScript files.
+Can you explain the role of Express.js in serving static content?
+Express.js is a web application framework for Node.js that simplifies the process of building web applications and APIs. It provides middleware and routing capabilities, making it easy to handle HTTP requests and serve static content like HTML files, CSS, and client-side JavaScript.
+Express.js is a popular open-source web framework built on top of Node.js. It provides a robust set of features and tools to simplify building web applications and APIs using JavaScript on the server-side.
+Difference between static and dynamic website :
+Static Website: A static website contains web pages with fixed content that remains the same for all users and does not change unless manually updated. These websites are built using HTML, CSS, and client-side JavaScript. Examples include informational websites, portfolios, and blogs where content is pre-defined and doesn't vary based on user interactions.
+Dynamic Website: A dynamic website generates content dynamically based on user interactions, input, or database queries. The content can change dynamically based on user actions or external data sources. These websites often use server-side technologies like Node.js, PHP, or Python along with databases to fetch and display dynamic content. Examples include e-commerce sites, social media platforms, and web applications where content is personalized or interactive.
+Imagine a restaurant website.
+Static Website: It would display a fixed menu with prices, photos, and contact information. This information wouldn't change unless the owner manually updates the website files.
+Dynamic Website:  This website could display a menu that changes daily based on available ingredients. When you click on an item, it might show detailed information pulled from a database. Additionally, you might be able to make online reservations or even order food for delivery – all happening dynamically based on your actions and data stored on the server.
+
+Steps:
+1.	Create Folder
+2.	Open it in VS Code
+3.	npm init (package.json will be created)
+4.	create index.js
+5.	npm install express --save(node_module folder is created)
+6.	Inside index.js type: 
+const express = require('express');
+const app = express();
+7.	Create New Folder 'public'
+8.	Create index.html inside this folder
+html:5
+change title
+<h1>This is static website</h1>
+9.	Open index.js
+app.use(express.static('public'))
+app.listen(4000,()=>{
+       console.log("Server is started");
+})
+10.	node index.js
+11.	type localhost:4000 in browser
+
