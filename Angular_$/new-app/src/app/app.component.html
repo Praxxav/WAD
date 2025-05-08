@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>{{title}}</h1>
+
+<input #name type="text" placeholder="Enter Name" name="Name" /><br>
+<input #Email type="text" placeholder="Enter Email" name="Email" /><br>
+<input #contact type="text" placeholder="Enter Contact" name="contact" /><br>
+
+
+<button (click)="getvalue(name.value, Email.value, contact.value)">Register</button>
+
+<h1>Your registered data</h1><br>
+<p>Name: {{displayname}}</p><br>
+<p>Email: {{displayemail}}</p><br>
+<p>Contact: {{displaycontact}}</p>
+</div>

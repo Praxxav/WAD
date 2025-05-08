@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration</title>
+</head>
+<body>
+  <h2>Register</h2>
+  <input type="text" id="name" placeholder="Enter Name"><br><br>
+  <input type="email" id="email" placeholder="Enter Email"><br><br>
+  <input type="password" id="password" placeholder="Enter Password"><br><br>
+  <button onclick="saveData()">Register</button>
+  <br><br>
+  <a href="list.html">Go to User List</a>
+<script>
+function saveData(){
+  let name, email, password;
+  name = document.getElementById("name").value;
+  email = document.getElementById("email").value;
+  password = document.getElementById("password").value;
+
+/*
+  localStorage.setItem("name", name);
+  localStorage.setItem("email", email);
+  localStorage.setItem("password", password);
+*/
+
+  let user_records = new Array();
+  user_records = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : [];
+  if(user_records.some((v)=>{
+    return v.email === email
+  })){
+  alert("Duplicate Data");
+  }
+  else{
+  user_records.push({
+    "name":name,
+    "email":email,
+    "password":password
+    })
+  localStorage.setItem("users", JSON.stringify(user_records));
+  }
+}
+</script>
