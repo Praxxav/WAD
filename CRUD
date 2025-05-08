@@ -39,7 +39,7 @@ Steps:
 4.	open mongodb compass -> new connection -> show dbs ->use student -> 
 db.createCollection('profile') 
 db.profile.insertOne({name:"Avnish", email:"ash@gmail", city:"Pune"})
-5.	Open VS code terminal ->terminal
+5.	Open VS code t erminal ->terminal
 npm i mongodb
 npm i express
 6.	Inside mongodb.js
